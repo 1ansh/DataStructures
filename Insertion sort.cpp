@@ -3,6 +3,21 @@
 
 using namespace std;
 
+void insertionSort(int arr[],int n)
+{
+	int i,j,key;
+	for(j=1;j<n;j++)
+	{
+		key=arr[j];
+		i=j-1;
+		while(i>=0 and arr[i]>key)
+		{
+			arr[i+1]=arr[i];
+			i--;
+		}
+		arr[i+1]=key;
+	}
+}
 
 int main()
 {
@@ -15,21 +30,10 @@ int main()
     {
     	cin>>arr[i];
 	}
-	for(j=1;j<n;j++)
-	{
-		key=arr[j];
-		i=j-1;
-		while(i>=0 and arr[i]>key)
-		{
-			arr[i+1]=arr[i];
-			i--;
-		}
-		arr[i+1]=key;
-	}
+	insertionSort(arr,n);
 	cout<<"Sorted array:"<<endl;
 	for(i=0;i<n;i++)
 	{
 		cout<<arr[i]<<" ";
 	}
 }
-
