@@ -2,6 +2,12 @@
 #include <cstring>
 using namespace std;
 
+void update(int arr[],int k, int item)
+{
+	arr[k]=item;
+}
+
+
 int main()
 {
 	int n;
@@ -18,10 +24,9 @@ int main()
 	cin>>k;
 	cout<<"Enter the item:";
 	cin>>item;
-	arr[k]=item;
+	update(arr,k,item);
 	for(i=0;i<n;i++)
 	{
 		cout<<arr[i]<<endl;
 	}
 }
-
