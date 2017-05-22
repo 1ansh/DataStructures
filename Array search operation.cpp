@@ -2,6 +2,20 @@
 #include <cstring>
 using namespace std;
 
+int search(int arr[],int n,int k)
+{
+	int j,ind=-1;
+	while(j<n)
+	{
+		if(arr[j]==k)
+		{
+			ind=j;
+		}
+		j++;
+	}
+	return ind;
+}
+
 int main()
 {
 	int n;
@@ -16,14 +30,13 @@ int main()
 	cout<<"Enter the item:";
 	int k,ind;
 	cin>>k;
-	while(j<n)
+	ind=search(arr,n,k);
+	if(ind==-1)
 	{
-		if(arr[j]==k)
-		{
-			ind=j;
-		}
-		j++;
+		cout<<"The element not found."<<endl;
 	}
-	cout<<k<<" is at index "<<ind<<endl;
+	else
+	{
+		cout<<k<<" is at index "<<ind<<endl;
+	}
 }
-
