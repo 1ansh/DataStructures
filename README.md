@@ -1,2 +1,2 @@
-# dsa_codes
-DSA codes
+# DataStructures
+Data Structures Operations
