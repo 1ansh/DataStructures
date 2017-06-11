@@ -14,6 +14,7 @@ node* newNode(int x)
 	temp->data=x;
 	temp->left=NULL;
 	temp->right=NULL;
+	return temp;
 }
 
 int main()
